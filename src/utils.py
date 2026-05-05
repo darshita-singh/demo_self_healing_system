@@ -1,5 +1,6 @@
 src/utils.py
 src/utils.py
+src/utils.py
 import datetime
 
 
@@ -46,6 +47,8 @@ def calculate_average(values):
         total += v
 
     return total / len(values)
+
+
 
 
 
