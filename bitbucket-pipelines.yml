@@ -1,0 +1,10 @@
+image: python:3.10  # Use official Python Docker image
+
+pipelines:
+  pull-requests:
+    '**':   # this means run for all PRs, regardless of source/target branch
+      - step:
+          name: Run Python Script from PR Branch
+          script:
+            - python --version
+            - python ./src/main.py
