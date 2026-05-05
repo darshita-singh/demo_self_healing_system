@@ -1,6 +1,7 @@
 src/utils.py
 src/utils.py
 src/utils.py
+src/utils.py
 import datetime
 
 
@@ -16,7 +17,7 @@ def log_message(msg):
 def calculate_bonus(score):
     # BUG: multiplying int by string
     bonus = score * bonus_factor
-    bonus = score * bonus_factor
+    bonus = score * float(bonus_factor)
     print("Bonus:", bonus)
     return bonus
 
@@ -47,6 +48,8 @@ def calculate_average(values):
         total += v
 
     return total / len(values)
+
+
 
 
 
