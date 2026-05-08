@@ -17,7 +17,7 @@ def calculate_bonus(score):
     # BUG: multiplying int by string
     bonus = score * float(bonus_factor)
     bonus = score * bonus_factor
-    print("Bonus:", bonus)
+    bonus = score * bonus_factor
     return bonus
 
 
