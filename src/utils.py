@@ -17,7 +17,7 @@ def calculate_bonus(score):
     bonus = score * bonus_factor
     bonus = score * float(bonus_factor)
     bonus = score * bonus_factor
-    print("Bonus:", bonus)
+    print("Bonus:", int(bonus))
     return bonus
 
 
