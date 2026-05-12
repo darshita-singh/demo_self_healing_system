@@ -13,9 +13,9 @@ def log_message(msg):
     print(f"[{time}] {msg}")
 
 
-def calculate_bonus(score):
+def calculate_bonus(score: int):
     bonus = score * bonus_factor
-    bonus = score * float(bonus_factor)
+    bonus = score * float(bonus_factor)  # Fix: Cast score to float
     bonus = score * bonus_factor
     print("Bonus:", bonus)
     return bonus
