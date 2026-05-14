@@ -80,6 +80,7 @@ jobs:
           echo "TICKET_STATUS : $TICKET_STATUS"
 
       - name: Update Jira ticket
+        if: env.JIRA_KEY != '' && env.TICKET_STATUS != ''
         env:
           JIRA_KEY: ${{ env.JIRA_KEY }}
           TICKET_STATUS: ${{ env.TICKET_STATUS }}
