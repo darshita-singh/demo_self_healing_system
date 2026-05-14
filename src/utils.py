@@ -5,7 +5,7 @@ import datetime
 
 
 # Intentional bug
-bonus_factor = '1.5'
+bonus_factor = 1.5
 
 
 def log_message(msg):
@@ -16,8 +16,7 @@ def log_message(msg):
 def calculate_bonus(score):
     bonus = score * bonus_factor
     bonus = score * float(bonus_factor)
-    bonus = score * bonus_factor
-    print("Bonus:", bonus)
+    bonus = score * float(bonus_factor)
     return bonus
 
 
