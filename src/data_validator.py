@@ -1,6 +1,7 @@
 from utils import log_message
 
 
+
 def validate_data(data):
 
 
@@ -46,11 +47,12 @@ def is_valid_name(record):
 def is_valid_score(record):
 
     score = record["score"]
-
+    try:
+        score = float(score)
+    except (ValueError, TypeError):
+        return False
     if score < 0:
         return False
-
     if score > 100:
         return False
-
     return True

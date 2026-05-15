@@ -23,9 +23,13 @@ def compute_result(record):
     bonus = calculate_bonus(score)
     
     final_score = score + bonus
-
-    return {
-        "id": record["id"],
+    bonus = calculate_bonus(score)
+    # Ensure bonus is numeric
+    try:
+        bonus = float(bonus)
+    except (ValueError, TypeError):
+        bonus = 0
+    final_score = score + bonus
         "name": record["name"],
         "score": final_score
     }
